@@ -1,0 +1,40 @@
+Hàm vẽ text
+https://msdn.microsoft.com/en-us/library/system.windows.forms.control.paint(v=vs.110).aspx
+
+Paint event handler
+https://msdn.microsoft.com/en-us/library/system.windows.forms.control.paint(v=vs.110).aspx
+
+http://download.cnet.com/MainType/3000-2316_4-10469574.html
+khodohoa.info/nexus-font-phan-mem-quan-ly-font/
+
+otf vs ttf
+https://www.youtube.com/watch?v=fITjc8WGMuU
+
+utf-8
+http://htmlpurifier.org/docs/enduser-utf8.html
+http://stackoverflow.com/questions/22994848/how-can-i-determine-font-and-layout-information-for-a-unicode-character
+UnicodeData.txt
+
+
+Các đuôi font:
+.ttf
+.ttc
+.otf
+
+http://stackoverflow.com/questions/29936070/how-to-detect-which-language-fonts-are-supported-by-device
+
+* Lấy về phương thức support language in freetype
+https://www.freetype.org/freetype2/docs/reference/ft2-truetype_tables.html#FT_Get_CMap_Language_ID
+
+* Add font external folder 
+http://blog.megahard.info/2010/08/use-font-without-installing.html
+
+* Moving form by click-drag on a control
+http://stackoverflow.com/questions/13477228/moving-window-by-click-drag-on-a-control
+
+* Resize form :
+http://stackoverflow.com/a/17220049/5617850
+
+* Make form background transparent: 
+http://stackoverflow.com/questions/4387680/transparent-background-on-winforms
+
