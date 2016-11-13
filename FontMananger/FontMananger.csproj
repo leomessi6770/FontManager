@@ -75,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -100,6 +101,15 @@
     <Content Include="freetype6.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\minus-symbol.png" />
+    <None Include="Resources\minus-sign.png" />
+    <None Include="Resources\icon_close_16x16.png" />
+    <None Include="Resources\icon_maximize_exit_16x16.png" />
+    <None Include="Resources\icon_maximize_16x16.png" />
+    <None Include="Resources\icon_minimize_16x16.png" />
+    <None Include="Resources\icon_fullscreen_16x16.png" />
+    <None Include="Resources\icon_fullscreen_exit_128x128.png" />
+    <None Include="Resources\icon_fullscreen_128x128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -38,3 +38,6 @@ http://stackoverflow.com/a/17220049/5617850
 * Make form background transparent: 
 http://stackoverflow.com/questions/4387680/transparent-background-on-winforms
 
+* icons:
+https://www.iconfinder.com/iconsets/navigation-set-arrows-part-one
+http://www.flaticon.com/packs/basic-application/

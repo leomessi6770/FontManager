@@ -117,4 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMaximize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        dQAAAHUB48IHZQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADVSURBVDhP3dE9
+        DgFBGMbxSZBQql1AolFKiFI0xCVcQKtzB6dwAV8bCoVCodCJj0qtUKis/yOzwtq1tvUmv83szvs+ycwa
+        qowZjj475NDBDW6AOcwafdR9Kq6rHlODAzXLEl7AFY9HUc1RqDSGiB9AaXgEvQywwm8BVAZjeMNJ6CjR
+        AZSGJ3gO2+/RAZSGp3gbtnsLXLQIDKB0Zt3+x7Dd159qaxEW0EDg8EtPVo+wgBSqSPj37H4BJy1C7+Ab
+        qoSzFn8QsEUX+Zh62MC0cIBi49gbY5p3jCGksMfcUrYAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

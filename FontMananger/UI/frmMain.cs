@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontMananger.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,26 +23,97 @@ namespace FontMananger.UI
         [DllImport("User32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
+        private const int FORM_PADDING = 5;
+        private const int FORM_BORDER_THICKNESS = 4;
+
         public frmMain()
         {
             InitializeComponent();
 
-            pnlMenu.BackColor = Color.FromArgb(149, 165, 166);
-            pnlListFont.BackColor = Color.FromArgb(189, 195, 199);
-            pnlShowContent.BackColor = Color.FromArgb(236, 240, 241);
-
+            // Set mau sac cho cac thanh phan cua form
+            SetFormBorderColor(Color.FromArgb(127, 140, 141));          // #7f8c8d
+            pnlTitle.BackColor = Color.FromArgb(147, 158, 159);         // #939e9f
+            pnlMenu.BackColor = Color.FromArgb(149, 165, 166);          // #95a5a6
+            pnlListFont.BackColor = Color.FromArgb(189, 195, 199);      // #bdc3c7
+            pnlShowContent.BackColor = Color.FromArgb(236, 240, 241);   // #ecf0f1
+            
             // Them callback cho viec Keo' di chuyen form
-            pnlTitle.MouseDown += PnlTitle_MouseDown;
-
-            SetFormBorderColor(Color.DarkCyan);
+            pnlColumn1.MouseDown += DragMoveFormCallback;
+            pnlColumn2.MouseDown += DragMoveFormCallback;
+            pnlColumn3.MouseDown += DragMoveFormCallback;
+            pnlColumn4.MouseDown += DragMoveFormCallback;
 
             MakeFormBackgroundTransparent(Color.MediumAquamarine);
+
+            btnClose.Click += BtnClose_Click;
+            btnMaximize.Click += BtnMaximize_Click;
+            this.SizeChanged += FrmMain_SizeChanged;
+            btnMinimize.Click += BtnMinimize_Click;
+        }
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FrmMain_SizeChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximize.Image = Resources.icon_maximize_exit_16x16;
+                this.Padding = new Padding(0);
+                DisableFormBorder(true);
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMaximize.Image = Resources.icon_maximize_16x16;
+                this.Padding = new Padding(FORM_PADDING);
+                DisableFormBorder(false);
+            }
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                btnMaximize.Image = Resources.icon_maximize_exit_16x16;
+                this.Padding = new Padding(0);
+                DisableFormBorder(true);
+            }
+            else if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                btnMaximize.Image = Resources.icon_maximize_16x16;
+                this.Padding = new Padding(FORM_PADDING);
+                DisableFormBorder(false);
+            }
+        }
+
+        private void DisableFormBorder(bool toggle)
+        {
+            if (toggle == true)
+            {
+                pnlBorder.Padding = new Padding(0);
+            }
+            else
+            {
+                pnlBorder.Padding = new Padding(FORM_BORDER_THICKNESS);
+            }
+        }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void MakeFormBackgroundTransparent(Color colorNeedToAvoid)
         {
             this.BackColor = colorNeedToAvoid;
             this.TransparencyKey = colorNeedToAvoid;
+            //this.BackColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         // Chuc nang resize form
@@ -112,11 +184,12 @@ namespace FontMananger.UI
                     return;
                 }
             }
+
             base.WndProc(ref m);
         }
 
         // Chuc nang keo title de di chuyen form
-        private void PnlTitle_MouseDown(object sender, MouseEventArgs e)
+        private void DragMoveFormCallback(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
