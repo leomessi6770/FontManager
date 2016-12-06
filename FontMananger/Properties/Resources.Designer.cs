@@ -63,6 +63,16 @@ namespace FontMananger.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap grid {
+            get {
+                object obj = ResourceManager.GetObject("grid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_close_16x16 {
             get {
                 object obj = ResourceManager.GetObject("icon_close_16x16", resourceCulture);
@@ -146,6 +156,16 @@ namespace FontMananger.Properties {
         internal static System.Drawing.Bitmap icon_minimize_3_16x16 {
             get {
                 object obj = ResourceManager.GetObject("icon_minimize_3_16x16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_plus_16x16 {
+            get {
+                object obj = ResourceManager.GetObject("icon_plus_16x16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

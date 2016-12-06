@@ -34,7 +34,6 @@
             this.pnlColumn1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlColumn2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnlColumn3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlColumn4 = new System.Windows.Forms.Panel();
@@ -46,6 +45,7 @@
             this.pnlShowContent = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlBorder = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -114,23 +114,13 @@
             // 
             // pnlColumn2
             // 
-            this.pnlColumn2.Controls.Add(this.label5);
+            this.pnlColumn2.Controls.Add(this.button1);
             this.pnlColumn2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlColumn2.Location = new System.Drawing.Point(236, 0);
             this.pnlColumn2.Margin = new System.Windows.Forms.Padding(0);
             this.pnlColumn2.Name = "pnlColumn2";
             this.pnlColumn2.Size = new System.Drawing.Size(236, 40);
             this.pnlColumn2.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "<Buttons here>";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlColumn3
             // 
@@ -251,6 +241,16 @@
             this.pnlBorder.Size = new System.Drawing.Size(1190, 690);
             this.pnlBorder.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::FontMananger.Properties.Resources.icon_plus_16x16;
+            this.button1.Location = new System.Drawing.Point(3, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 30);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btnMinimize
             // 
             this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
@@ -306,7 +306,6 @@
             this.pnlColumn1.ResumeLayout(false);
             this.pnlColumn1.PerformLayout();
             this.pnlColumn2.ResumeLayout(false);
-            this.pnlColumn2.PerformLayout();
             this.pnlColumn3.ResumeLayout(false);
             this.pnlColumn3.PerformLayout();
             this.pnlColumn4.ResumeLayout(false);
@@ -338,11 +337,11 @@
         private System.Windows.Forms.Panel pnlColumn2;
         private System.Windows.Forms.Panel pnlColumn3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel pnlColumn4;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button button1;
     }
 }
