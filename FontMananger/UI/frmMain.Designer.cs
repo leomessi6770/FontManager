@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.tblPnlTitle = new System.Windows.Forms.TableLayoutPanel();
@@ -45,6 +46,8 @@
             this.pnlShowContent = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pnlBorder = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
@@ -114,6 +117,7 @@
             // 
             // pnlColumn2
             // 
+            this.pnlColumn2.Controls.Add(this.button2);
             this.pnlColumn2.Controls.Add(this.button1);
             this.pnlColumn2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlColumn2.Location = new System.Drawing.Point(236, 0);
@@ -241,13 +245,31 @@
             this.pnlBorder.Size = new System.Drawing.Size(1190, 690);
             this.pnlBorder.TabIndex = 1;
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::FontMananger.Properties.Resources.tick_box1;
+            this.button2.Location = new System.Drawing.Point(50, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 40);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::FontMananger.Properties.Resources.icon_plus_16x16;
-            this.button1.Location = new System.Drawing.Point(3, 5);
+            this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 30);
+            this.button1.Size = new System.Drawing.Size(50, 40);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -343,5 +365,7 @@
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button2;
     }
 }
